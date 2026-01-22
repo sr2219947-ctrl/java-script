@@ -1,4 +1,8 @@
 // string practice
+const name="Sakshi";
+const repocount=15;
+console.log(name+repocount +"value");
+
 let rawName ="   SakshiRana   ";
 console.log("---TRIM()--");
 console.log("Before trim:", `"${rawName}"`);
@@ -39,7 +43,7 @@ console.log("seo friendly url:",cleanurl);
  
 // extract domain part
 let domain= blogurl.slice(8,21);
-console.log("extracted domain:", domain);
+console.log(domain);
 
 
  
