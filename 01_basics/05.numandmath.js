@@ -47,6 +47,27 @@ console.log("Ceil:",Math.ceil(4.2));
 //5
 console.log("Floor:", Math.floor(4.9));
 //4
+console.log("Min:",Math.min(4,3,6,8));
+//3
+console.log("Max:",Math.max(4,3,6,8));
+//8
+ //power and root
+ console.log("Power:",Math.pow(2,3));
+ //8
+ console.log("Square root:",Math.sqrt(25));
+ //5
+
+ //random numbers
+//Random numbers between 0 ands 1
+console.log("Random:",Math.random());
+ //random between 1 and 10
+ console.log("Random between 1-10:",Math.floor(Math.random()*10)+1);
+ //random between 10 and 20
+ const min =10;
+ const max=20;
+ const randomInRange=Math.floor(Math.random()*(max-min+1))+min;
+ console.log("Random 10-20:", randomInRange);
+
 
 
 
