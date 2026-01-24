@@ -67,6 +67,18 @@ console.log("Random:",Math.random());
  const max=20;
  const randomInRange=Math.floor(Math.random()*(max-min+1))+min;
  console.log("Random 10-20:", randomInRange);
+  // 4-digit -otp 
+  const otp4Digit= Math.floor(Math.random()*9000)+1000;
+  console.log("4-digit- Otp:",otp4Digit);
+  // toss until result is head 
+  let toss;
+  do{
+    toss=Math.random()<0.5? "Head":"Tail";
+    console.log("Toss result:",toss);
+   } while(toss!="Head");
+    console.log("🎉🎉Head appeared");
+  
+
 
 
 
