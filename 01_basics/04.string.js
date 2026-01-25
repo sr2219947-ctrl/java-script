@@ -1,22 +1,4 @@
 // string practice
-const name="Sakshi";
-const repocount=15;
-console.log(name+repocount +"value");
-
-const gameName= new String('freefireX')
-console.log(gameName[10]);
-console.log(gameName);
-console.log(gameName.length);
-console.log(gameName.toUpperCase());
-console.log(gameName.charAt(2));
-console.log(gameName.indexOf('r'));
-
-const Name=new String('Sakshi-Ra')
-const newstring = Name.substring(0,4)
-console.log(newstring);
-const anotherstring=Name.slice(-8,4)
-console.log(anotherstring);
-
 let rawName ="   SakshiRana   ";
 console.log("---TRIM()--");
 console.log("Before trim:", `"${rawName}"`);
@@ -57,7 +39,7 @@ console.log("seo friendly url:",cleanurl);
  
 // extract domain part
 let domain= blogurl.slice(8,21);
-console.log(domain);
+console.log("extracted domain:", domain);
 
 
  
