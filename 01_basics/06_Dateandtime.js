@@ -67,6 +67,13 @@ console.log("now.getTime():",now.getTime());
 console.log("Secods timestamp:",Math.floor(Date.now()/1000));//A timestamp is a number that represents a specific moment in time.
 1769234567
 //that number = timestamp.
+let f1=new Date(); //Current date
+let ts= f1.getTime(); // date-> timestamp
+let f2=new Date(ts); //timestamp ->date
+console.log(f1);
+console.log(ts);
+console.log(f2);
+//👉d1 AND d2 show the same date and time 
 
 // ----comparison between Dates ----
 console.log("\n --Date Comparison");
@@ -95,4 +102,21 @@ if(Date.now()>deadline.getTime()){
 // } else {
 //   console.log("You can submit");
 // }
+let date = new Date();   // photo taken here
+
+setTimeout(() => {
+  console.log("Date.now():", Date.now());
+  console.log("date.getTime():", date.getTime());
+}, 3000);
+ 
+const createdAt= new Date();
+setTimeout(()=>{
+if(Date.now()-createdAt.getTime()>3000){
+    console.log("Otp expired");
+}
+},4000);
+
+
+
+
 
