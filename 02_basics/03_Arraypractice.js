@@ -89,7 +89,7 @@ passed:s.marks>=70
 console.log(newStudents);
 //map() -> returns new array, same length usually , does not change original 
 // splice()-> changes the original array, used to add / remove and replace inside array 
-// filter() cretae s a new array wit elements that pass a condition
+// filter() cretae s a new array with elements that pass a condition
 let ray= [8,9,5,7];
 let even = ray.filter(num=>num%2===0);
 console.log(even);
@@ -100,6 +100,49 @@ let rr=[1,2,3];
 let sum=rr.reduce((acc,curr)=>acc+curr,0);
 console.log(sum);
 //6
+// what reduce do initially (it combines all elements of an array into one single value)
+// (sum,max,min,total,object)
+// array.reduce((accumulator,currentValue)=>{
+// return newAccumulatorValue;
+//},initialValue); // accumulator stores the the resutls so far 
+//curr(current value)
+//initial value start value of ac
+let m=[10,20,30,40,50];
+let max=m.reduce((acc,curr)=>{
+    return curr> acc?curr:acc;
+},m[0]);
+console.log(max);
+ // minimum number
+ let o=[90,80,56];
+ let min=o.reduce((acc,curr)=>{
+    return curr< acc?curr:acc;
+ },o[0]);
+ // total price
+ let cart=[
+    {item:"book",price:200},
+    {item:"pen",price:45}
+ ];
+ let total=cart.reduce((acc,item)=>acc+item.price,0);
+ //sort
+ let r=[9,8,1];
+ r.sort((a,b)=>a-b);
+ console.log(r);
+ //logic a-b<0 keep order a comes before b
+ // >0 b comes before a swap and if =0 no change same 
+ // sort the strings alphabetically 
+ let NAMES=["Sakshi","sarul","nikhil"];
+ NAMES.sort();
+ console.log(NAMES);
+ //sort objects by marks 
+ let classmates=[
+    {name:"Sakshi",marks:90},
+    {name:"Anita",marks:75}
+ ];
+classmates.sort((a,b) =>b.marks-a.marks);
+console.log(classmates);
+ 
+ 
+
 
 
  
