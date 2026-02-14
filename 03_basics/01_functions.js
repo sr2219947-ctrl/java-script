@@ -122,6 +122,21 @@ function multiplyAll(...numbers){
     }
     return result;
 }
-console.log(multiplyALL())
-
+console.log( multiplyAll(2,3,4))
+//handle object(user)
+function handleObject(anyobject){
+ console.log(`Username is ${anyobject.username}, price is ${anyobject.price}`);
+}
+//handleObject (user)
+handleObject({
+    username:"Sakshi",
+    price:399
+})
+//anyobject is just a parameter so internally it becomes anyobject={username:"Sakshi",price:399}
+//so it is parameter that holds the object passed into function 
+const myNewArray=[200,400,100,600]
+function returnSecondvalue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondvalue(myNewArray));
 
