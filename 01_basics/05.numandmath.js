@@ -1,9 +1,11 @@
 //number in java script
 const score=400;
 console.log("Score:",score);
+let num1=231;
+let num2=231;
 // ouput:400
 // number object 
-const balance= new Number(100);
+const balance=100;
 console.log("Balance:",balance);
  
 //convert the number to string
