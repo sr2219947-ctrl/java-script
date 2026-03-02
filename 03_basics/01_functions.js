@@ -140,3 +140,90 @@ function returnSecondvalue(getArray){
 }
 console.log(returnSecondvalue(myNewArray));
 
+for(let j=0;j<6;j++){
+    for(let i=1;i<=5;i++){
+        console.log(i ); 
+        // for print in same line we can use process.stdout.write() in node.js but in browser we can use console.log() with a space
+    }
+}
+
+console.log("---loops revision-- ")
+ for (let j=0;j<6;j++){
+    let line="";
+    for(let i=1;i<5;i++){
+        line+=i+""; 
+    }
+    console.log(line);
+ }
+ for(let j=0;j<6;j++){
+    for(let i=1;i<=5;i++){
+        process.stdout.write(i+" "); 
+    }
+    console.log();
+}//for print in same line we can use process.stdout.write() in node.js but in browser we can use console.log() with a space
+ 
+let i=1;
+while(i<6){
+    console.log(i);
+    i++;
+}
+
+let arr=[10,20,30,40,50];
+for(let i=0;i<arr.length;i++){
+    console.log(arr[i]);
+}
+// for in and for off loop 
+ // for...in is used to iterate over the object keys(properties)
+ let person={
+    name:"Sakshi",
+    age:20,
+    city:"Karnal"
+ };
+ for(let key in person){
+    console.log(key); //prints keys 
+    console.log(person[key]); //pritns value 
+ }
+ let ar= [10,20,30];
+ for(let index in arr){
+    console.log(index);
+ }
+ //for...of loop is ued ti iterate over values of iterable objects 
+ let a=[56,67,4333];
+ for(let value of a){
+    console.log(value);
+ }
+  let str="ram ram";
+  for(let ch of str ){
+    console.log(ch);
+  }
+// for off ->it is iterable that can looped over one value at a time .if it store values in order - value iterable ,if it stores the key-value pairs - not directly iterable .
+//switch
+switch(new Date().getDay())
+// switch(2)
+{
+    case 0:
+        console.log("Sunday");
+        break;
+    case 1: 
+    console.log("Monday");
+    break;
+    case 2:
+        console.log("Tuesday");
+        break;
+        case 3:
+            console.log("Wednesday");
+            break;
+            case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    default:
+        console.log("Not a Valid Day");
+}
+
+

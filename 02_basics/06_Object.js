@@ -136,14 +136,29 @@ console.log(a);
 // r4.a=100; //if we change r4 it will not affect r2 because r4 is a deep copy of r2 and they are different objects in memory
 // console.log(r4,r2);
 // //nested object
- let obj = {
-   name: "Rohit",
-    money: 430,
-     balance: 30,
-     age: 20,
-    aadhar: "hfdsiohsai"
- };
-const{name,age,...rest}=obj;
-console.log(rest);
+//  let obj = {
+//    name: "Rohit",
+//     money: 430,
+//      balance: 30,
+//      age: 20,
+//     aadhar: "hfdsiohsai"
+//  };
+// const{name,age,...rest}=obj;
+// console.log(rest);
 //note: rest operator is used to collect remaining properties of an object after destructuring and it creates a new object with those remaining properties. In this example, rest will contain money, balance, and aadhar properties of the obj object.
+const obj={
+    name:"shara",
+    age:30,
+    license : "yes",
+    city:"Pune"
+}
+// const o = Object.values(obj); //to accessed the values 
+// console.log(o);
+const key =Object.keys(obj);
+// console.log(k);
+for(let i=0;i<key.length;i++){
+    console.log(key[i]);
+}
+
+
 
