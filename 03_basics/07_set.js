@@ -51,3 +51,9 @@ console.log(set3);
 //filter :array
 const  conclusion=new  Set([...set5].filter((num)=>set6.has(num)));
 console.log(conclusion);
+// iterate over set 
+// for of
+// for(let value of set)
+//     console.log(value);
+// for  each 
+set5.forEach((value)=>console.log(value));
