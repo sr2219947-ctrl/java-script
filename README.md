@@ -2,7 +2,7 @@
 
 ## Projects
 
-****1. Olympic Countdown Timer** ******
+**1. Olympic Countdown Timer**
    Live Demo: https://sr2219947-ctrl.github.io/java-script/08_Olympic/
    
 ## Description
