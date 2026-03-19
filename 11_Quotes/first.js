@@ -60,6 +60,6 @@ function generateQuotes() {
     const index = Math.floor(Math.random() * quotes.length);
     text.textContent = quotes[index];
 }
-setInterval(generateQuotes, 1000);
+setInterval(generateQuotes, 3000);
 
 
