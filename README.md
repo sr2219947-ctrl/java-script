@@ -12,7 +12,7 @@ A countdown timer showing remaining time until Olympic 2028.
 
 **2. Quote Generator**
 
-Live Demo: https://github.com/sr2219947-ctrl/java-script/blob/main/11_Quotes/
+Live Demo: https://sr2219947-ctrl.github.io/java-script/11_Quotes/
 
 ## Description
 A simple Quote Generator that displays random motivational quotes with a clean and interactive UI.
