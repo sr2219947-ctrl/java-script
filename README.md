@@ -50,6 +50,13 @@ A fun and interactive JavaScript mini project where colorful dots appear on the 
 
 Live Demo: https://sr2219947-ctrl.github.io/java-script/13_Colordots
 
+## 6. Color Button Controller
+
+**. Description**
+
+An interactive web application that allows users to change the background color by clicking on color buttons. Each button represents a different color, and the UI updates instantly based on user interaction. This project demonstrates DOM manipulation and event handling in JavaScript.
+
+Live Demo:  https://sr2219947-ctrl.github.io/java-script/14_background 
 
 ## Technologies
 HTML
