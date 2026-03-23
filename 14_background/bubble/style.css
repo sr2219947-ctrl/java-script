@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+#grandparent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+height:400px;
+width:400px;
+border:2px solid black;
+}
+#parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+    width:200px;
+    border:2px solid black;
+}
+#child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100px;
+    width:100px;
+    border:2px solid black;
+}
