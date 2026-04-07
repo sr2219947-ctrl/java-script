@@ -201,4 +201,4 @@ submitBtn.addEventListener('click', (e) => {
     resultDiv.textContent = `Your Score: ${score} / ${questions.length}`;
 
     submitBtn.disabled = true;
-});
+}); 
