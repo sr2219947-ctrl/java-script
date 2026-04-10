@@ -1,6 +1,6 @@
 window.document
 document //
-1.)** document object model is way to repersent a web page so that porgrams (like js) interact with it **
+1.)** document object model is way to repersent a web page so that programs (like js) interact with it **
 
 **Browser take your HTMl document and turns it  into the DOM. 
 
@@ -24,7 +24,7 @@ document //
                2.) (attributes ) node   -> id="first"  
 👉and every element is treated as  object                 
 if <h1 id ="first" class="header"> Hello coder army</h1>
-then it cnvert into object and like this 
+then it convert into object and like this 
 const obj{
     id:"first",
     class:"header",
