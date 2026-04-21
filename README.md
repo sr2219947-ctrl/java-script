@@ -71,4 +71,12 @@ Live Demo:  https://sr2219947-ctrl.github.io/java-script/15_Form/Quiz
 ## 8. Zomato Clone 
 Live Demo: https://sr2219947-ctrl.github.io/java-script/zomato/Project_zom
 
+## 9. Astrology  1 & 2
+Live Demo: https://sr2219947-ctrl.github.io/java-script/Astrology 
+
+Live Demo: https://sr2219947-ctrl.github.io/java-script/Astrology/Astrology_2
+
+
+
+
 
