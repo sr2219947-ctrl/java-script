@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Knowledge Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading">
+        <div class="load-icon">📚</div>
+        <div class="load-title">The Grand Library</div>
+        <div class="load-bar-wrap">
+            <div class="load-bar"></div>
+        </div>
+        <div class="load-sub">Arranging the shelves…</div>
+    </div>
+
+    <!-- ATMOSPHERE -->
+    <div class="atmosphere">
+        <div class="atm-ceiling"></div>
+        <div class="atm-left"></div>
+        <div class="atm-right"></div>
+        <div id="dust-container"></div>
+    </div>
+
+    <!-- LANTERN -->
+    <div class="page-lantern">
+        <div class="lantern-wire"></div>
+        <div class="lantern-body">
+            <div class="lantern-glow"></div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <span class="toast-icon" id="toast-icon"></span>
+        <span id="toast-msg"></span>
+    </div>
+
+    <!-- APP -->
+    <div id="app">
+
+        <!-- NAVIGATION -->
+        <nav class="lib-nav">
+            <div class="nav-inner">
+                <div class="nav-logo">
+                    <span class="nav-logo-icon">📚</span>
+                    <div>
+                        <div class="nav-logo-text">The Grand Library</div>
+                        <span class="nav-logo-sub">Knowledge Collection</span>
+                    </div>
+                </div>
+                <div class="nav-search">
+                    <input type="text" id="search-inp" placeholder="Search by title, topic, or concept…"
+                        autocomplete="off">
+                    <button class="nav-search-btn" onclick="doSearch()">⌕</button>
+                </div>
+                <div class="nav-stats">
+                    <div class="nav-stat">
+                        <span class="nav-stat-num" id="stat-total">18</span>
+                        <span class="nav-stat-label">Books</span>
+                    </div>
+                    <div class="nav-stat">
+                        <span class="nav-stat-num" id="stat-read">0</span>
+                        <span class="nav-stat-label">Read</span>
+                    </div>
+                    <div class="nav-stat">
+                        <span class="nav-stat-num" id="stat-cats">6</span>
+                        <span class="nav-stat-label">Topics</span>
+                    </div>
+                    <button class="nav-mode-btn" onclick="toggleTheme()" id="theme-btn">☀ Light Mode</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <div class="hero">
+            <div class="hero-left">
+                <div class="hero-eyebrow">✦ Welcome to the Collection</div>
+                <h1 class="hero-title">Explore <em>Knowledge</em><br>One Book at a Time</h1>
+                <p class="hero-desc">Browse shelves spanning Technology, Artificial Intelligence, Science Fiction,
+                    Science, Philosophy, and personal Notes. Click any spine to open a book and read.</p>
+            </div>
+            <div class="hero-right">
+                <div class="hero-badge">
+                    <span class="hero-badge-num" id="badge-total">18</span>
+                    <span class="hero-badge-label">Total Books</span>
+                </div>
+                <div class="hero-badge">
+                    <span class="hero-badge-num" id="badge-read">0</span>
+                    <span class="hero-badge-label">Books Read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filter-section">
+            <div class="filter-row" id="filter-row">
+                <span class="filter-label">Browse by:</span>
+            </div>
+        </div>
+
+        <!-- VIEW TOGGLE -->
+        <div class="view-toggle">
+            <button class="view-btn active" id="btn-shelf" onclick="setView('shelf')">🗄 Shelf View</button>
+            <span class="view-divider">|</span>
+            <button class="view-btn" id="btn-carousel" onclick="setView('carousel')">🎠 3D Carousel</button>
+        </div>
+
+        <!-- SHELF VIEW -->
+        <div class="shelves-container" id="shelf-view">
+            <!-- Built by JS -->
+        </div>
+
+        <!-- CAROUSEL VIEW -->
+        <div id="carousel-view">
+            <div class="carousel-stage">
+                <div class="carousel-ring" id="c-ring"></div>
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-nav">
+                    <button class="c-nav-btn" id="c-prev">&#8592;</button>
+                    <div class="c-dots" id="c-dots"></div>
+                    <button class="c-nav-btn" id="c-next">&#8594;</button>
+                    <button class="c-auto-btn on" id="c-auto-btn" onclick="toggleCarouselAuto()">&#9654; Auto</button>
+                </div>
+            </div>
+            <div class="c-thumb-row" id="c-thumbs"></div>
+            <div class="c-info-bar">
+                <div class="c-info-name" id="c-info-name"></div>
+                <div class="c-info-cat" id="c-info-cat"></div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="lib-footer">
+            <span class="footer-text">"A room without books is like a body without a soul." — Cicero</span>
+            <div class="footer-keys">
+                <span><span class="key">←</span><span class="key">→</span> carousel</span>
+                <span><span class="key">Esc</span> close</span>
+                <span><span class="key">R</span> random</span>
+            </div>
+        </footer>
+
+    </div><!-- /#app -->
+
+    <!-- READER MODAL -->
+    <div class="reader-overlay" id="reader" onclick="overlayClick(event)">
+        <div class="reader-modal" id="reader-modal">
+            <button class="reader-close" onclick="closeReader()">✕</button>
+            <!-- Top color strip -->
+            <div class="reader-top-strip" id="r-strip">
+                <div class="reader-top-content">
+                    <div class="reader-icon-wrap" id="r-icon-wrap"><span id="r-icon"></span></div>
+                    <div class="reader-heading">
+                        <div class="reader-cat-pill" id="r-badge"></div>
+                        <div class="reader-title" id="r-title"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scrollable body -->
+            <div class="reader-body">
+                <!-- Progress -->
+                <div class="r-progress-wrap">
+                    <div class="r-progress-top">
+                        <span class="r-progress-label">Reading Progress</span>
+                        <span class="r-progress-val" id="r-prog-val">0%</span>
+                    </div>
+                    <div class="r-prog-bar">
+                        <div class="r-prog-fill" id="r-prog-fill"></div>
+                    </div>
+                </div>
+
+                <div class="reader-tagline" id="r-tagline"></div>
+
+                <div class="r-section">
+                    <div class="r-section-head">Overview</div>
+                    <p class="r-text" id="r-overview"></p>
+                </div>
+
+                <div class="r-section">
+                    <div class="r-section-head">Key Concepts</div>
+                    <div class="r-chips" id="r-chips"></div>
+                </div>
+
+                <div class="r-section">
+                    <div class="r-section-head">Notable Insight</div>
+                    <div class="r-insight" id="r-insight"></div>
+                </div>
+
+                <div class="r-section">
+                    <div class="r-section-head">Related Topics</div>
+                    <div class="r-related-chips" id="r-rel-chips"></div>
+                </div>
+
+                <div class="r-actions">
+                    <button class="r-btn r-btn-primary" id="ask-more-btn">✦ learn more </button>
+                    <button class="r-btn r-btn-outline" id="buy-book-btn">📖 Buy Book</button>
+                    <button class="r-btn r-btn-outline" onclick="markRead()">✓ Mark as Read</button>
+                    <button class="r-btn r-btn-outline" onclick="randomBook()">🎲 Random Book</button>
+                    <button class="r-btn r-btn-outline" onclick="shareBook()">⎘ Copy Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
